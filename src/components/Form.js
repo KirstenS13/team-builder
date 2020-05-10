@@ -17,6 +17,13 @@ function Form(){
                 name='email'
                 placeholder='Type your email here...'
             />
+            <label>Role:</label>
+            <input
+                type='text'
+                id='role'
+                name='role'
+                placeholder='Type your job title here...'
+            />
         </form>
     );
 }
