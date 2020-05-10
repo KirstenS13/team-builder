@@ -1,6 +1,11 @@
-import React from 'react';
+//set up file by importing React and useState
+import React, { useState } from 'react';
 
 function Form(){
+    //create state for each new entry
+    const [teamMember, setTeamMember] = useState();
+
+    //set up the form with labels and inputs
     return (
         <form>
             <label htmlFor='name'>Name:</label>
@@ -8,24 +13,26 @@ function Form(){
                 type='text' 
                 id='name' 
                 name='name' 
-                placeholder='Type your full name here...'
+                placeholder='Enter full name here...'
             />
-            <label>Email:</label>
+            <label htmlFor='email'>Email:</label>
             <input
                 type='text'
                 id='email'
                 name='email'
-                placeholder='Type your email here...'
+                placeholder='Enter email here...'
             />
-            <label>Role:</label>
+            <label htmlFor='role'>Role:</label>
             <input
                 type='text'
                 id='role'
                 name='role'
-                placeholder='Type your job title here...'
+                placeholder='Enter job title here...'
             />
+            <button type='submit'>Add Team Member</button>
         </form>
     );
 }
 
+//export Form as default
 export default Form;
