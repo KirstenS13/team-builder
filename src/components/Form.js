@@ -10,6 +10,13 @@ function Form(){
                 name='name' 
                 placeholder='Type your full name here...'
             />
+            <label>Email:</label>
+            <input
+                type='text'
+                id='email'
+                name='email'
+                placeholder='Type your email here...'
+            />
         </form>
     );
 }
