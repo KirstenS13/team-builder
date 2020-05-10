@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 
 function Form(){
     //create state for each new entry
-    const [teamMember, setTeamMember] = useState();
+    const [teamMember, setTeamMember] = useState({
+        name: '',
+        email: '',
+        role: ''
+    });
 
     //set up the form with labels and inputs
     return (
@@ -14,6 +18,7 @@ function Form(){
                 id='name' 
                 name='name' 
                 placeholder='Enter full name here...'
+                value={teamMember.name}
             />
             <label htmlFor='email'>Email:</label>
             <input
@@ -21,6 +26,7 @@ function Form(){
                 id='email'
                 name='email'
                 placeholder='Enter email here...'
+                value={teamMember.email}
             />
             <label htmlFor='role'>Role:</label>
             <input
@@ -28,6 +34,7 @@ function Form(){
                 id='role'
                 name='role'
                 placeholder='Enter job title here...'
+                value={teamMember.role}
             />
             <button type='submit'>Add Team Member</button>
         </form>
