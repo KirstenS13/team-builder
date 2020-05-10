@@ -11,9 +11,6 @@ function App() {
     <div className="App">
       {/* Render my team */}
       <h1>My Team</h1>
-      <ul>
-        
-      </ul>
     </div>
   );
 }
