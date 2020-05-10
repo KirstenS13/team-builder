@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 
 function Form(){
     //create state for each new entry
+    //set default state as an object with keys for each input
     const [teamMember, setTeamMember] = useState({
         name: '',
         email: '',
         role: ''
     });
+
+    //create a function that will add user input to state
+    const handleChanges = event => {
+        setTeamMember({ ...teamMember, [event.target.name]: event.target.value });
+    };
 
     //set up the form with labels and inputs
     return (
