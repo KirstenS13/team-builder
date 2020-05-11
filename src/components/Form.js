@@ -27,7 +27,7 @@ const StyledInput = styled.input`
 
 //create styled button
 const Button = styled.button`
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 5px 0;
     width: 50%;
     border-radius: 5px;
