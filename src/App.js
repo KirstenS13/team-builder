@@ -29,7 +29,6 @@ function App() {
     <div className="App">
       {/* Render my team */}
       <h1>My Team</h1>
-      <p>Add a new team member</p>
       <Form addNewMember={addNewMember}/>
       <TeamMember team={team}/>
     </div>
