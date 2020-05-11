@@ -20,6 +20,7 @@ function Form(){
         <form>
             <label htmlFor='name'>Name:</label>
             <input 
+                onChange={handleChanges}
                 type='text' 
                 id='name' 
                 name='name' 
@@ -28,6 +29,7 @@ function Form(){
             />
             <label htmlFor='email'>Email:</label>
             <input
+                onChange={handleChanges}
                 type='text'
                 id='email'
                 name='email'
@@ -36,6 +38,7 @@ function Form(){
             />
             <label htmlFor='role'>Role:</label>
             <input
+                onChange={handleChanges}
                 type='text'
                 id='role'
                 name='role'
