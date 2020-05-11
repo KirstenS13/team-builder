@@ -7,8 +7,9 @@ import Form from './components/Form.js';
 
 function App() {
   //set up state
-  //give team a default value (object)
-  const [team, setTeam] = useState({});
+  //give team a default value (array)
+  const [team, setTeam] = useState([]);
+  console.log(team);
 
   //create function that will add new team member to team
   const addNewMember = teamMember => {

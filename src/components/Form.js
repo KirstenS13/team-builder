@@ -9,6 +9,7 @@ function Form(props){
         email: '',
         role: ''
     });
+    console.log(teamMember);
 
     //create a function that will add user input to state
     const handleChanges = event => {
