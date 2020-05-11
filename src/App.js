@@ -4,6 +4,8 @@ import './App.css';
 
 //import Form
 import Form from './components/Form.js';
+//import TeamMember
+import TeamMember from './components/TeamMember.js';
 
 function App() {
   //set up state
@@ -13,7 +15,13 @@ function App() {
 
   //create function that will add new team member to team
   const addNewMember = teamMember => {
-    setTeam([...team, teamMember]);
+    const newMember = {
+      id: team.length + 1,
+      name: teamMember.name,
+      email: teamMember.email,
+      role: teamMember.role
+    }
+    setTeam([...team, newMember]);
   }
 
   //pass setTeam into Form
@@ -22,6 +30,7 @@ function App() {
       {/* Render my team */}
       <h1>My Team</h1>
       <Form addNewMember={addNewMember}/>
+      <TeamMember team={team}/>
     </div>
   );
 }
