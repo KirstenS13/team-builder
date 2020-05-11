@@ -10,11 +10,17 @@ function App() {
   //give team a default value (object)
   const [team, setTeam] = useState({});
 
+  //create function that will add new team member to team
+  const addNewMember = teamMember => {
+    setTeam([...team, teamMember]);
+  }
+
+  //pass setTeam into Form
   return (
     <div className="App">
       {/* Render my team */}
       <h1>My Team</h1>
-      <Form/>
+      <Form addNewMember={addNewMember}/>
     </div>
   );
 }

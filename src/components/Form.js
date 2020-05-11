@@ -1,7 +1,7 @@
 //set up file by importing React and useState
 import React, { useState } from 'react';
 
-function Form(){
+function Form(props){
     //create state for each new entry
     //set default state as an object with keys for each input
     const [teamMember, setTeamMember] = useState({
@@ -15,9 +15,16 @@ function Form(){
         setTeamMember({ ...teamMember, [event.target.name]: event.target.value });
     };
 
+    //create a function that will add new team member to the team state in App.js
+    const submitForm = event => {
+        event.preventDefault();
+        props.addNewMember(teamMember);
+        setTeamMember({name: '', email: '', role: ''});
+    }
+
     //set up the form with labels and inputs
     return (
-        <form>
+        <form onSubmit={submitForm}>
             <label htmlFor='name'>Name:</label>
             <input 
                 onChange={handleChanges}
